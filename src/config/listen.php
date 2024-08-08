@@ -2,7 +2,7 @@
 
 use App\Php94\Api\Http\Api;
 use Composer\Autoload\ClassLoader;
-use PHP94\Facade\Logger;
+use PHP94\Logger;
 use PHP94\Logger\LocalLogger;
 use PHP94\Router\Router;
 

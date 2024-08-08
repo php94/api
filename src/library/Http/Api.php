@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace App\Php94\Api\Http;
 
 use App\Php94\Api\Lib\Resp;
-use PHP94\Facade\Db;
-use PHP94\Facade\Logger;
-use PHP94\Help\Request;
+use PHP94\Db;
+use PHP94\Logger;
+use PHP94\Request;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;

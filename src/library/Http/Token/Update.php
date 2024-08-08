@@ -5,16 +5,16 @@ declare(strict_types=1);
 namespace App\Php94\Api\Http\Token;
 
 use App\Php94\Admin\Http\Common;
-use PHP94\Facade\Db;
+use PHP94\Db;
 use PHP94\Form\Field\Datetime;
-use PHP94\Help\Request;
+use PHP94\Request;
 use PHP94\Form\Field\Hidden;
 use PHP94\Form\Field\Radio;
 use PHP94\Form\Field\Radios;
 use PHP94\Form\Field\Text;
 use PHP94\Form\Field\Textarea;
 use PHP94\Form\Form;
-use PHP94\Help\Response;
+use PHP94\Response;
 
 class Update extends Common
 {
