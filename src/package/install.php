@@ -1,10 +1,8 @@
 <?php
-
+// 安装脚本文件
 use PHP94\Package;
 
-return [
-    'install' => function () {
-        $sql = <<<'str'
+$sql = <<<'str'
 DROP TABLE IF EXISTS `prefix_php94_api_api`;
 CREATE TABLE `prefix_php94_api_api` (
     `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',
@@ -56,23 +54,5 @@ CREATE TABLE `prefix_php94_api_log` (
     PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT COMMENT='日志表';
 str;
-        Package::execSql($sql);
-    },
-    'unInstall' => function () {
-        $sql = <<<'str'
-DROP TABLE IF EXISTS `prefix_php94_api_api`;
-DROP TABLE IF EXISTS `prefix_php94_api_token`;
-DROP TABLE IF EXISTS `prefix_php94_api_access`;
-DROP TABLE IF EXISTS `prefix_php94_api_log`;
-str;
-        Package::execSql($sql);
-    },
-    'update' => function (string $oldversion) {
-        $updates = [];
-        foreach ($updates as $version => $fn) {
-            if (version_compare($oldversion, $version, '<')) {
-                $fn();
-            }
-        }
-    },
-];
+
+Package::execSql($sql);
