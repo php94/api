@@ -41,18 +41,6 @@ CREATE TABLE `prefix_php94_api_access` (
     `methods` json NOT NULL COMMENT '授权方法',
     PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT COMMENT='令牌权限表';
-DROP TABLE IF EXISTS `prefix_php94_api_log`;
-CREATE TABLE `prefix_php94_api_log` (
-    `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',
-    `code` varchar(255) COMMENT '令牌',
-    `path` varchar(255) COMMENT '接口路径',
-    `error` int(10) unsigned COMMENT '错误代码',
-    `message` varchar(255) COMMENT '消息',
-    `method` varchar(255) COMMENT '请求方法',
-    `date` DATE NOT NULL COMMENT '日期',
-    `datetime` datetime NOT NULL COMMENT '日期时间',
-    PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT COMMENT='日志表';
 str;
 
 Package::execSql($sql);

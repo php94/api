@@ -3,7 +3,7 @@
     "title": "接口管理系统",
     "description": "基于令牌授权的接口管理系统",
     "license": "GPL-3.0",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "type": "php94",
     "require": {
         "php94/admin": "^1.0"
